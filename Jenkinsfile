@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/JOstapjuk/testProject.git'
+                git branch: 'main', url: 'https://github.com/JOstapjuk/testProject.git'
             }
         }
 
@@ -27,7 +27,7 @@ pipeline {
 
     post {
         always {
-            echo 'Pipeline lõppes'
+            echo 'Pipeline finished'
         }
     }
 }
